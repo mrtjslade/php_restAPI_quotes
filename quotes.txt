@@ -1,0 +1,63 @@
+TRUNCATE TABLE authors, categories, quotes RESTART IDENTITY;
+
+-- Insert authors
+INSERT INTO authors (author) VALUES
+('Obi-Wan Kenobi'),
+('Darth Vader'),
+('Han Solo'),
+('Yoda'),
+('Vegeta (Dragon Ball Z)'),
+('Old Man (The Legend of Zelda)'),
+('Narrator (Fallout)'),
+('Peppy Hare (Star Fox)'),
+('GLaDOS (Portal)'),
+('Martin Fowler'),
+('Harold Abelson and Gerald Jay Sussman'),
+('Filipe Fortes'),
+('Linus Torvalds'),
+('Anonymous'),
+('Edsger Dijkstra'),
+('Larry Page'),
+('Vladimir Putin'),
+('Andrew Ng'),
+('Fei-Fei Li'),
+('Albert Einstein'),
+('Douglas Adams'),
+('Libby Larsen'),
+('Alan Kay');
+
+-- Insert categories
+INSERT INTO categories (category) VALUES
+('Star Wars'),
+('Gaming'),
+('Programming'),
+('Artificial Intelligence'),
+('Technology');
+
+-- Insert quotes
+INSERT INTO quotes (quote, author_id, category_id) VALUES
+('May the Force be with you.', 1, 1),
+('The Force will be with you, always.', 1, 1),
+('I find your lack of faith disturbing.', 2, 1),
+('Never tell me the odds.', 3, 1),
+('Do or do not. There is no try.', 4, 1),
+('I am the prince of all Saiyans!', 5, 2),
+('It''s dangerous to go alone! Take this.', 6, 2),
+('War. War never changes.', 7, 2),
+('Do a barrel roll!', 8, 2),
+('The cake is a lie.', 9, 2),
+('Any fool can write code that a computer can understand. Good programmers write code that humans can understand.', 10, 3),
+('Programs must be written for people to read, and only incidentally for machines to execute.', 11, 3),
+('Debugging is like being a detective in a mystery movie where you are also the murderer.', 12, 3),
+('Talk is cheap. Show me the code.', 13, 3),
+('The best thing about a boolean is even if you are wrong, you are only off by a bit.', 14, 3),
+('The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.', 15, 4),
+('Artificial intelligence would be the ultimate version of Google. The ultimate search engine that would understand everything on the web. It would understand exactly what you wanted, and it would give you the right thing.', 16, 4),
+('Artificial intelligence is the future, not only for Russia, but for all humankind. It comes with colossal opportunities, but also threats that are difficult to predict. Whoever becomes the leader in this sphere will become the ruler of the world.', 17, 4),
+('AI is like the wild west. We need a sheriff to tame the new frontier.', 18, 4),
+('The most important application of AI is to make people''s lives better.', 19, 4),
+('The human spirit must prevail over technology.', 20, 5),
+('Technology is a word that describes something that doesn''t work yet.', 21, 5),
+('The great myth of our times is that technology is communication.', 22, 5),
+('Technology is anything that wasn''t around when you were born.', 23, 5),
+('The best way to predict the future is to invent it.', 24, 5);
